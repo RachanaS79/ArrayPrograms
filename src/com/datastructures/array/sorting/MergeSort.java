@@ -6,9 +6,10 @@ public class MergeSort {
 
         int i = l;
         int j = m+1;
-        int k = l;
+        int k = 0;
 
-        int[] temp = new int[10];
+        int tempArraySize = (r -l) + 1;
+        int[] temp = new int[tempArraySize];
 
         while(i<=m && j<=r){
             if(arr[i]<arr[j])
@@ -27,8 +28,9 @@ public class MergeSort {
             temp[k++] = arr[j++];
         }
 
-        for(i = 0; i<r; i++){
-            arr[i] = temp[i];
+        i = l;
+        for(k = 0; k<tempArraySize; k++, i++){
+            arr[i] = temp[k];
         }
 
     }
@@ -36,7 +38,7 @@ public class MergeSort {
    public static void mergeSort(int arr[], int l,  int r){
        if(l<r) {
 
-           int m = (r-1)/2;
+           int m =  l + (r-l)/2;
 
            mergeSort(arr, l, m);
            mergeSort(arr, m + 1, r);
@@ -47,17 +49,17 @@ public class MergeSort {
 
     public static void main(String[] args){
         int arr[] = {10,80, 60, 40, 90, 12};
-        int r = arr.length;
+        int r = arr.length-1;
         int l = 0;
-        int m = (r-1)/2;
+        int m = l + (r-l)/2;
         System.out.println("m " +m);
         System.out.println("r " +r);
 
         mergeSort(arr, l , r);
 
-//        System.out.println("printing the array");
-//        for(int i = 0; i<r ; i++){
-//            System.out.println(arr[i] + ",");
-//        }
+        System.out.println("printing the array");
+        for(int i = 0; i<r ; i++){
+            System.out.print(arr[i] + ",");
+       }
     }
 }
