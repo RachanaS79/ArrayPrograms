@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FrequencyOfNumberInArray {
 
-    static void frquencyNumber(int arr[], int n){
+    static void frequencyNumber(int arr[], int n){
 
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int i=0; i<n ; i++){
@@ -27,6 +27,6 @@ public class FrequencyOfNumberInArray {
 
         int arr[] = {10, 20, 30, 10};
         int n = arr.length;
-        frquencyNumber(arr, n);
+        frequencyNumber(arr, n);
     }
 }

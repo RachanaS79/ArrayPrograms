@@ -1,4 +1,4 @@
-package com.datastructures.array;
+package com.datastructures.array.search;
 
 import java.util.Scanner;
 //search element in sorted array
