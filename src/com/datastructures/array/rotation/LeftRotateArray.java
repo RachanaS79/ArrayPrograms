@@ -1,7 +1,10 @@
 package com.datastructures.array.rotation;
 
 import java.util.Scanner;
-
+/*
+time complexity = O(n*d)
+space complexity = O(1)
+ */
 public class LeftRotateArray {
 
     public static void leftRotate(int arr[], int d, int n){
